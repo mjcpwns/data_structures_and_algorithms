@@ -1,0 +1,15 @@
+Rotating left
+Tree:
+      3
+     / \
+    /   \
+   /     \
+  -1      6
+ / \     / \
+-4  0   5   8
+
+#nodes = 7,  #leaves = 4
+Infix  : -4 -1 0 3 5 6 8 
+Prefix : 3 -1 -4 0 6 5 8 
+Postfix: -4 0 -1 5 8 6 3 
+ByLevel: 3 -1 6 -4 0 5 8 

@@ -1,0 +1,72 @@
+
+NOTE:
+- Your time complexities should be expressed in big-O notation and be in
+  terms of n, where n is the size (i.e., number of items) of the queue
+
+=========
+ListQueue
+=========
+
+-------------+----------------------------------------------------------
+             |                    time complexity
+  operation  +-----------------+------------------+---------------------
+             |    best case    |    worst case    |    average case
+-------------+-----------------+------------------+---------------------
+             |                 |                  |
+   enqueue   |      O(1)       |       O(1)       |        O(1)
+             |                 |                  |
+-------------+-----------------+------------------+---------------------
+             |                 |                  |
+   dequeue   |      O(1)       |       O(1)       |        O(1)
+             |                 |                  |
+-------------+-----------------+------------------+---------------------
+
+time complexity - head and tail nodes are given 
+
+==========
+ArrayQueue
+==========
+
+-------------+----------------------------------------------------------
+             |                    time complexity
+  operation  +-----------------+------------------+---------------------
+             |    best case    |    worst case    |    average case
+-------------+-----------------+------------------+---------------------
+             |                 |                  |
+   enqueue   |      O(1)       |       O(n)       |        O(1)
+             |                 |                  |
+-------------+-----------------+------------------+---------------------
+             |                 |                  |
+   dequeue   |      O(n)       |       O(n)       |        O(n)
+             |                 |                  |
+-------------+-----------------+------------------+---------------------
+
+enqueue - mode case is average case (realloc is not as frequent as best case)
+dequeue - have to shift elements everytime
+
+==================
+CircularArrayQueue
+==================
+
+-------------+----------------------------------------------------------
+             |                    time complexity
+  operation  +-----------------+------------------+---------------------
+             |    best case    |    worst case    |    average case
+-------------+-----------------+------------------+---------------------
+             |                 |                  |
+   enqueue   |      O(1)       |       O(n)       |        O(1)
+             |                 |                  |
+-------------+-----------------+------------------+---------------------
+             |                 |                  |
+   dequeue   |      O(1)       |       O(1)       |        O(1)
+             |                 |                  |
+-------------+-----------------+------------------+---------------------
+
+enqueue - mode case is average case (realloc is not as frequent as best case)
+dequeue - only moving frontIndex and decrementing size
+
+Time complexity for realloc:
+Allocation of memory - O(1)
+Copying n elements from old location to new location - O(n)
+
+average case for realloc - O(n)/n = O(1)

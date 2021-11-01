@@ -1,0 +1,24 @@
+Rotating left
+Rotating left
+Rotating left
+Rotating left
+Rotating right
+Rotating left
+Tree:
+       10
+       / \
+      /   \
+     /     \
+    7      29
+   / \     / \
+  5   9   /   \
+ /       24   30
+3       / \     \
+       /   \    32
+      14   26
+
+#nodes = 11,  #leaves = 5
+Infix  : 3 5 7 9 10 14 24 26 29 30 32 
+Prefix : 10 7 5 3 9 29 24 14 26 30 32 
+Postfix: 3 5 9 7 14 26 24 32 30 29 10 
+ByLevel: 10 7 29 5 9 24 30 3 14 26 32 

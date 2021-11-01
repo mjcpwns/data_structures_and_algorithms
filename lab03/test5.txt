@@ -1,0 +1,23 @@
+Tree:
+     10
+     / \
+    /   \
+   /     \
+  5      14
+ / \       \
+3   7      30
+     \     / \
+      9   /   \
+         29   32
+        /
+       24
+        \
+        26
+
+#nodes = 11,  #leaves = 4
+Infix  : 3 5 7 9 10 14 24 26 29 30 32 
+Prefix : 10 5 3 7 9 14 30 29 24 26 32 
+Postfix: 3 9 7 5 26 24 29 32 30 14 10 
+ByLevel: 10 5 14 3 7 30 9 29 32 24 26 
+
+// Reasonably right-balanced tree with uneven length branches

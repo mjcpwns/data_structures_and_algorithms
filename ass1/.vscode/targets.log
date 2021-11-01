@@ -1,0 +1,350 @@
+make all --print-data-base --no-builtin-variables --no-builtin-rules --question
+# GNU Make 4.1
+# Built for x86_64-pc-linux-gnu
+# Copyright (C) 1988-2014 Free Software Foundation, Inc.
+# License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
+# This is free software: you are free to change and redistribute it.
+# There is NO WARRANTY, to the extent permitted by law.
+
+# Make data base, printed on Sat Apr  3 11:47:07 2021
+
+# Variables
+
+# automatic
+<D = $(patsubst %/,%,$(dir $<))
+# automatic
+?F = $(notdir $?)
+# environment
+DESKTOP_SESSION = xfce
+# default
+.SHELLFLAGS := -c
+# environment
+VSCODE_LOG_NATIVE = false
+# environment
+cadPATH = /usr/local/cad/bin:/usr/local/cad/other/bin:/usr/local/cad/ucb/bin
+# automatic
+?D = $(patsubst %/,%,$(dir $?))
+# automatic
+@D = $(patsubst %/,%,$(dir $@))
+# environment
+XAUTHORITY = /tmp/.xauth-z5317349/vx7.orchestra.cse.unsw.EDU.AU:8005
+# automatic
+@F = $(notdir $@)
+# makefile
+CURDIR := /tmp_amd/kamen/export/kamen/5/z5317349/2521/ass1
+# makefile
+SHELL = /bin/sh
+# environment
+XDG_CURRENT_DESKTOP = XFCE
+# environment
+VSCODE_NLS_CONFIG = {"locale":"en-gb","availableLanguages":{},"_languagePackSupport":true}
+# environment
+_ = /usr/bin/make
+# makefile (from 'Makefile', line 3)
+CFLAGS = -Wall -Werror -Wno-unused-function -g
+# environment
+XDG_CONFIG_DIRS = /etc/xdg
+# makefile (from 'Makefile', line 1)
+MAKEFILE_LIST :=  Makefile
+# environment
+VSCODE_NODE_CACHED_DATA_DIR = /import/kamen/5/z5317349/.config/Code/CachedData/f30a9b73e8ffc278e71575118b6bf568f04587c8
+# 'override' directive
+GNUMAKEFLAGS := 
+# environment
+MAKELEVEL := 0
+# environment
+XDG_DATA_DIRS = /usr/local/share:/usr/share
+# environment
+DBUS_SESSION_BUS_ADDRESS = unix:abstract=/tmp/dbus-HBUKWGt2F2,guid=94160853722fad84b5e4c22b60679617
+# environment
+VSCODE_VERBOSE_LOGGING = true
+# environment
+GLADE_PIXMAP_PATH = :
+# environment
+LC_COLLATE = POSIX
+# environment
+VSCODE_IPC_HOOK_EXTHOST = /tmp/run-52724-Jqsols/vscode-ipc-a749b412-ebbd-499b-a493-25c376075730.sock
+# environment
+ALSA_CARD = PCH
+# environment
+sharePATH = /usr/local/share/bin-pc.amd64.linux:/usr/local/share/bin
+# environment
+KRB5CCNAME = FILE:/tmp/krb5cc_52724_p1OjkJ
+# default
+MAKE_HOST := x86_64-pc-linux-gnu
+# environment
+PATH = /import/kamen/5/z5317349/bin-pc.amd64.linux:/import/kamen/5/z5317349/bin:/usr/local/bin:/usr/bin:/bin
+# environment
+MAILDROP = /import/kamen/5/z5317349/.incoming-mail
+# environment
+GPG_AGENT_INFO = /tmp/gpg-xBpNuH/S.gpg-agent:33555:1
+# environment
+SESSION_MANAGER = local/vx7:@/tmp/.ICE-unix/33473,unix/vx7:/tmp/.ICE-unix/33473
+# environment
+XDG_RUNTIME_DIR = /tmp/run-52724-Jqsols
+# environment
+WINDOWID = 39845892
+# environment
+BREAKPAD_DUMP_LOCATION = /import/kamen/5/z5317349/.config/Code/exthost Crash Reports
+# environment
+XDG_MENU_PREFIX = xfce-
+# environment
+VSCODE_LOG_STACK = false
+# environment
+VSCODE_CRASH_REPORTER_START_OPTIONS = {"companyName":"Microsoft","productName":"VSCode","submitURL":"appcenter://code?aid=fba07a4d-84bd-4fc8-a125-9640fc8ce171&uid=417a8f96-62e8-43c4-9f75-26a4432bc03e&iid=417a8f96-62e8-43c4-9f75-26a4432bc03e&sid=417a8f96-62e8-43c4-9f75-26a4432bc03e","uploadToServer":true}
+# default
+.FEATURES := target-specific order-only second-expansion else-if shortest-stem undefine oneshell archives jobserver output-sync check-symlink load
+# environment
+GLADE_MODULE_PATH = :
+# environment
+shareMANPATH = /usr/local/share/man
+# environment
+SSH_AUTH_SOCK = /tmp/ssh-KnqYvfL1rlfX/agent.33409
+# automatic
+%F = $(notdir $%)
+# environment
+DISPLAY = vx7.orchestra.cse.unsw.EDU.AU:8005.0
+# environment
+localPATH = /usr/local/bin
+# environment
+VSCODE_PIPE_LOGGING = true
+# environment
+PWD = /tmp_amd/kamen/export/kamen/5/z5317349/2521/ass1
+# environment
+SSH_AGENT_PID = 33457
+# environment
+ORIGINAL_XDG_CURRENT_DESKTOP = XFCE
+# environment
+MANPATH = /import/kamen/5/z5317349/man:/usr/local/man:/usr/local/X11/man:/usr/man:/usr/share/man
+# environment
+VSCODE_AMD_ENTRYPOINT = vs/workbench/services/extensions/node/extensionHostProcess
+# environment
+HOME = /import/kamen/5/z5317349
+# environment
+XDG_CACHE_HOME = /tmp/cache-52724-y2fk35
+# environment
+VSCODE_CLI = 1
+# environment
+LOGNAME = z5317349
+# environment
+APPLICATION_INSIGHTS_NO_DIAGNOSTIC_CHANNEL = true
+# environment
+localMANPATH = /usr/local/man
+# environment
+VSCODE_HANDLES_UNCAUGHT_ERRORS = true
+# automatic
+^D = $(patsubst %/,%,$(dir $^))
+# environment
+GLADE_CATALOG_PATH = :
+# environment
+COLORTERM = xfce4-terminal
+# default
+MAKE = $(MAKE_COMMAND)
+# default
+MAKECMDGOALS := all
+# environment
+SHLVL = 4
+# makefile (from 'Makefile', line 2)
+CC = gcc
+# default
+MAKE_VERSION := 4.1
+# environment
+USER = z5317349
+# makefile
+.DEFAULT_GOAL := all
+# environment
+x11PATH = /usr/local/X11/bin:/usr/bin/X11
+# automatic
+%D = $(patsubst %/,%,$(dir $%))
+# default
+MAKE_COMMAND := make
+# default
+.VARIABLES := 
+# automatic
+*F = $(notdir $*)
+# environment
+VSCODE_IPC_HOOK = /tmp/run-52724-Jqsols/vscode-0a5ae98b-1.54.1-main.sock
+# environment
+ARCH = pc.amd64.linux
+# makefile
+MAKEFLAGS = pqrR
+# environment
+MFLAGS = -pqrR
+# automatic
+*D = $(patsubst %/,%,$(dir $*))
+# environment
+MAIL = /import/kamen/5/z5317349/.incoming-mail
+# automatic
++D = $(patsubst %/,%,$(dir $+))
+# automatic
++F = $(notdir $+)
+# environment
+NO_AT_BRIDGE = 1
+# environment
+gnuPATH = /usr/local/gnu/bin
+# environment
+x11MANPATH = /usr/local/X11/man:/usr/X11R6/man
+# environment
+sysPATH = /usr/ucb:/usr/bin:/bin:/usr/ccs/bin
+# default
+MAKEFILES := 
+# automatic
+<F = $(notdir $<)
+# environment
+etcPATH = /usr/local/etc:/usr/etc:/etc:/sbin:/usr/sbin
+# environment
+ELECTRON_RUN_AS_NODE = 1
+# environment
+ELECTRON_NO_ATTACH_CONSOLE = 1
+# automatic
+^F = $(notdir $^)
+# environment
+ANDROID_SRC = /usr/lib/android-sdk
+# default
+SUFFIXES := 
+# environment
+gnuMANPATH = /usr/local/gnu/man
+# environment
+CHROME_DESKTOP = code-url-handler.desktop
+# environment
+sysMANPATH = /usr/man:/usr/share/man
+# default
+.INCLUDE_DIRS = /usr/include /usr/local/include /usr/include
+# default
+.RECIPEPREFIX := 
+# makefile (from 'Makefile', line 5)
+COMMON = FlightDb.c AVLTree.c List.c Record.c
+# environment
+LANG = en_AU.UTF-8
+# environment
+TERM = xterm
+# environment
+VSCODE_PID = 34016
+# variable set hash-table stats:
+# Load=105/1024=10%, Rehash=0, Collisions=13/132=10%
+
+# Pattern-specific Variable Values
+
+# No pattern-specific variable values.
+
+# Directories
+
+# . (device 39, inode 1066670): 24 files, no impossibilities.
+
+# 24 files, no impossibilities in 1 directories.
+
+# Implicit Rules
+
+# No implicit rules.
+
+# Files
+
+# Not a target:
+Record.c:
+#  Implicit rule search has been done.
+#  Last modified 2021-03-22 00:39:12
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+FlightDb.c:
+#  Implicit rule search has been done.
+#  Last modified 2021-04-02 15:45:18.356383524
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+List.c:
+#  Implicit rule search has been done.
+#  Last modified 2021-03-04 21:23:34
+#  File has been updated.
+#  Successfully updated.
+
+all: test testAss1
+#  Phony target (prerequisite of .PHONY).
+#  Command line target.
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has been updated.
+#  Successfully updated.
+
+testAss1: testAss1.c FlightDb.c AVLTree.c List.c Record.c
+#  Implicit rule search has not been done.
+#  Last modified 2021-04-02 15:45:22.500397615
+#  File has been updated.
+#  Successfully updated.
+#  recipe to execute (from 'Makefile', line 14):
+	$(CC) $(CFLAGS) -o testAss1 testAss1.c $(COMMON)
+
+.PHONY: all
+#  Implicit rule search has not been done.
+ 
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+Makefile:
+#  Implicit rule search has been done.
+#  Last modified 2021-04-02 15:43:43.86406216
+#  File has been updated.
+#  Successfully updated.
+
+test: test.c FlightDb.c AVLTree.c List.c Record.c
+#  Implicit rule search has not been done.
+#  Last modified 2021-04-02 15:45:22.316396989
+#  File has been updated.
+#  Successfully updated.
+#  recipe to execute (from 'Makefile', line 11):
+	$(CC) $(CFLAGS) -o test test.c $(COMMON)
+
+# Not a target:
+testAss1.c:
+#  Implicit rule search has been done.
+#  Last modified 2021-03-29 23:33:22
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+.DEFAULT:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+test.c:
+#  Implicit rule search has been done.
+#  Last modified 2021-03-30 00:28:22
+#  File has been updated.
+#  Successfully updated.
+
+clean:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 17):
+	rm -f test testAss1
+
+# Not a target:
+AVLTree.c:
+#  Implicit rule search has been done.
+#  Last modified 2021-04-02 15:42:46.315866423
+#  File has been updated.
+#  Successfully updated.
+
+# files hash-table stats:
+# Load=14/1024=1%, Rehash=0, Collisions=0/40=0%
+# VPATH Search Paths
+
+# No 'vpath' search paths.
+
+# No general ('VPATH' variable) search path.
+
+# strcache buffers: 1 (0) / strings = 31 / storage = 251 B / avg = 8 B
+# current buf: size = 8162 B / used = 251 B / count = 31 / avg = 8 B
+
+# strcache performance: lookups = 56 / hit rate = 44%
+# hash-table stats:
+# Load=31/8192=0%, Rehash=0, Collisions=6/56=11%
+# Finished Make data base on Sat Apr  3 11:47:07 2021
+
+ 

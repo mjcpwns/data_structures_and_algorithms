@@ -1,0 +1,170 @@
+!/bin/sh
+
+RED="\033[31m"
+GREEN="\033[32m"
+YELLOW="\033[33m"
+PURPLE_BOLD="\033[35;1m"
+RED_BOLD="\033[31;1m"
+GREEN_BOLD="\033[32;1m"
+RESET_COLOR="\033[0m"
+
+main()
+{
+	compile
+	cleanout
+    generate_expected_output_files
+	autotest
+    show_test_summary
+}
+
+compile()
+{
+	echo "Compiling..."
+	make || exit 1
+    echo
+}
+
+cleanout()
+{
+	rm -f tests/*.out
+}
+
+generate_expected_output_files()
+{
+if [ ! -d "tests" ]
+then   
+    mkdir tests
+    echo Least-hops route: > tests/1.exp
+    echo Berlin >> tests/1.exp
+    echo -\> Chicago >> tests/1.exp
+    echo Least-hops route: > tests/2.exp
+    echo Sydney >> tests/2.exp
+    echo -\> Honolulu >> tests/2.exp
+    echo -\> Chicago >> tests/2.exp
+    echo Least-hops route: > tests/3.exp
+    echo Sydney >> tests/3.exp
+    echo -\> Shanghai >> tests/3.exp
+    echo -\> London >> tests/3.exp
+    echo Least-hops route: > tests/4.exp
+    echo London >> tests/4.exp
+    echo -\> Shanghai >> tests/4.exp
+    echo -\> Sydney >> tests/4.exp
+    echo Least-hops route: > tests/5.exp
+    echo Sydney >> tests/5.exp
+    echo -\> Honolulu >> tests/5.exp
+    echo -\> Chicago >> tests/5.exp
+    echo -\> Buenos Aires >> tests/5.exp
+    echo Least-hops route: > tests/6.exp
+    echo Sydney >> tests/6.exp
+    echo -\> Guam >> tests/6.exp
+    echo -\> Manila >> tests/6.exp
+    echo -\> Bombay >> tests/6.exp
+    echo -\> Baghdad >> tests/6.exp
+    echo -\> London >> tests/6.exp
+    echo No route from Sydney to Buenos Aires > tests/7.exp
+    echo Least-hops route: > tests/8.exp
+    echo Sydney >> tests/8.exp
+    echo -\> Guam >> tests/8.exp
+    echo -\> Honolulu >> tests/8.exp
+    echo -\> Chicago >> tests/8.exp
+    echo -\> Panama City >> tests/8.exp
+    echo -\> Buenos Aires >> tests/8.exp
+    echo Least-hops route: > tests/9.exp
+    echo Sydney >> tests/9.exp
+    echo -\> Guam >> tests/9.exp
+    echo -\> Honolulu >> tests/9.exp
+    echo -\> Mexico City >> tests/9.exp
+    echo -\> Buenos Aires >> tests/9.exp
+    echo Least-hops route: > tests/10.exp
+    echo Sydney >> tests/10.exp
+    echo -\> Bombay >> tests/10.exp
+    echo -\> Azores >> tests/10.exp
+    echo -\> Buenos Aires >> tests/10.exp
+    echo Least-hops route: > tests/11.exp
+    echo Sydney >> tests/11.exp
+    echo -\> Buenos Aires >> tests/11.exp
+    echo Least-hops route: > tests/12.exp
+    echo Bombay >> tests/12.exp
+    echo -\> Istanbul >> tests/12.exp
+    echo -\> Azores >> tests/12.exp
+    echo -\> Montreal >> tests/12.exp
+    echo -\> Chicago >> tests/12.exp
+    echo Least-hops route: > tests/13.exp
+    echo Sydney >> tests/13.exp
+fi
+}
+
+tests="$@"
+tests_passed=0
+tests_failed=0
+if [ $# -eq 0 ]
+then
+    tests="1 2 3 4 5 6 7 8 9 10 11 12 13"
+fi
+
+autotest()
+{
+./travel Berlin Chicago > tests/1.out
+./travel Sydney Chicago > tests/2.out
+./travel Sydney London > tests/3.out
+./travel London Sydney > tests/4.out
+./travel Sydney 'Buenos Aires' > tests/5.out
+./travel Sydney London 6000 > tests/6.out
+./travel Sydney 'Buenos Aires' 5000 > tests/7.out
+./travel Sydney 'Buenos Aires' 7000 > tests/8.out
+./travel Sydney 'Buenos Aires' 8000 > tests/9.out
+./travel Sydney 'Buenos Aires' 11000 > tests/10.out
+./travel Sydney 'Buenos Aires' 12000 > tests/11.out
+./travel Bombay Chicago 5000 > tests/12.out
+./travel Sydney Sydney > tests/13.out
+
+for test in $tests
+do
+    case $test in
+        1|2|3|4|5|6|7|8|9|10|11|12|13)
+            case $test in
+                1) echo "TEST 1: Berlin Chicago" ;;
+                2) echo "TEST 2: Sydney Chicago" ;;
+                3) echo "TEST 3:  Sydney London" ;;
+                4) echo "TEST 4: London Sydney" ;;
+                5) echo "TEST 5: Sydney 'Buenos Aires'" ;;
+                6) echo "TEST 6: Sydney London 6000" ;;
+                7) echo "TEST 7: Sydney 'Buenos Aires' 5000" ;;
+                8) echo "TEST 8: Sydney 'Buenos Aires' 7000" ;;
+                9) echo "TEST 9: Sydney 'Buenos Aires' 8000" ;;
+                10) echo "TEST 10: Sydney 'Buenos Aires' 11000" ;;
+                11) echo "TEST 11: Sydney 'Buenos Aires' 12000" ;;
+                12) echo "TEST 12: Bombay Chicago 5000" ;;
+                13) echo "TEST 13: Sydney Sydney" ;;
+            esac
+
+            if diff tests/$test.exp tests/$test.out > /dev/null
+            then
+                printf "${GREEN}Test passed\n$RESET_COLOR"
+                tests_passed=$((tests_passed+1))            
+            else
+                printf "${RED}Test failed\n$RESET_COLOR"
+                printf "${YELLOW}Check differences between tests/$test.exp (expected output) and tests/$test.out (your output)\n$RESET_COLOR"
+                tests_failed=$((tests_failed+1)) 
+            fi
+            echo
+            ;;
+
+        *)
+            echo "Invalid test number '$test'"
+            ;;
+    esac
+done
+}
+
+show_test_summary()
+{
+if [ $tests_passed -eq 13 ]
+then 
+    printf "${PURPLE_BOLD}ALL TESTS PASSED, YAY!\n$RESET_COLOR"
+else
+    printf "${GREEN_BOLD}$tests_passed tests passed ${RED_BOLD}$tests_failed tests failed${RESET_COLOR}\n"
+fi
+}
+
+main "$@"

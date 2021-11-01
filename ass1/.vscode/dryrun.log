@@ -1,0 +1,6 @@
+make --dry-run --always-make --keep-going --print-directory
+make: Entering directory '/tmp_amd/kamen/export/kamen/5/z5317349/2521/ass1'
+gcc -Wall -Werror -Wno-unused-function -g -o test test.c FlightDb.c AVLTree.c List.c Record.c
+gcc -Wall -Werror -Wno-unused-function -g -o testAss1 testAss1.c FlightDb.c AVLTree.c List.c Record.c
+make: Leaving directory '/tmp_amd/kamen/export/kamen/5/z5317349/2521/ass1'
+ 

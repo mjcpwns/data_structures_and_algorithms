@@ -1,0 +1,41 @@
+Input	Has	    Initial	    Number	    AvgTime	    AvgTime
+Size	Dups	Order	    of runs	    forusel	    forsort
+
+10000	no	    random	    5	        0.218	    0.008
+10000	no  	sorted	    5	        0.006	    0.004
+10000	no	    reverse	    5	        0.003	    0.006
+10000	yes	    random	    5	        0.244	    0.008
+10000	yes	    sorted	    5	        0.028	    0.004
+10000	yes	    reverse	    5	        0.006	    0.004
+
+20000	no	    random	    5	        1.306	    0.018
+20000	no	    sorted	    5	        0.009	    0.008
+20000	no	    reverse	    5	        0.010	    0.009
+20000	yes	    random	    5	        1.279	    0.021
+20000	yes	    sorted	    5	        0.092	    0.009
+20000	yes	    reverse	    5	        0.012	    0.013
+
+40000	no	    random	    5	        6.699	    0.038
+40000	no	    sorted	    5	        0.026	    0.014
+40000	no	    reverse	    5	        0.024	    0.020
+40000	yes	    random	    5	        6.623	    0.036
+40000	yes	    sorted	    5	        0.246	    0.020
+40000	yes	    reverse	    5	        0.024	    0.020
+...
+
+
+Clearly, the data supports the hypothesis that average running time
+increases with input size. From observation, it is clear that the sort -n 
+function stays well within one second regardless of the initial order of
+the data for sizes less than 40000. In contrast, the average running time
+for the useIntList function increases exponentially as time increases, 
+making it inappropriate for data sets greater than 20000. 
+
+A point to note, however, is that for inputs with reverse initial order, the
+running time of the useIntList function was more closely related to the sort
+-n function. In fact, for a separate test conducted for a large data set of
+1,000,000 inputs all in reverse order, the average time for the sort -n 
+function was 0.037s (for 5 inputs) while it was 0.032s (for 5 inputs) for 
+the useIntList function. This confirms the other hypothesis, that the running time of an algorithm also varies considerably for different inputs of the same size. It also raises further query regarding the efficacy of different 
+algorithms in different scenarios and whether different types may be more
+appropriate in different circumstances.

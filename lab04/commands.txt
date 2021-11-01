@@ -1,0 +1,33 @@
++ 1 Smith Will
++ 2 Willis Bruce
++ 434 Chen Men
++ 67 Tisz Luca
++ 3 DelCarmen Juan
++ 6 Smith Will
++ 10 Willis Bruce
++ 116 Chen Men
++ 319 Tisz Luca
++ 230 DelCarmen Juan
++ 121 Smith Will
++ 22 Willis Bruce
++ 24 Chen Men
++ 27 Tisz Luca
++ 23 DelCarmen Juan
++ 126 Smith Will
++ 30 Willis Bruce
++ 36 Chen Men
++ 29 Tisz Luca
++ 30 DelCarmen Juan
++ 81 Smith Will
++ 42 Willis Bruce
++ 84 Chen Men
++ 47 Tisz Luca
++ 83 DelCarmen Juan
++ 126 Smith Will
++ 130 Willis Bruce
++ 66 Chen Men
++ 69 Tisz Luca
++ 90 DelCarmen Juan
+
+fn Smith Will
+
